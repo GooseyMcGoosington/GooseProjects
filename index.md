@@ -11,6 +11,7 @@ Software Rendering is a concept that has been practiced since the early 1970s. I
 Matrices can be thought of rectangular arrays of numbers arranged in rows and columns. They are heavily linked to Vectors and are used in manipulating them. A Vector would be a single matrix which has direction and magnitude. These are what make up 3D geometry and how they are shifted as the perspective changes. A vertex is a single point.
 
 For example, let's say we have two vectors and we want to work out the distance.
+
 $$
 A = \begin{bmatrix}
 12 \\ 7 \\ 5
@@ -19,10 +20,11 @@ B = \begin{bmatrix}
 -7 \\ 3 \\ 8
 \end{bmatrix}
 \qquad
-
 \|B - A\| = \sqrt{(-7 - 12)^2 + (3 - 7)^2 + (8 - 5)^2} \approx 19.65
 $$
-<p>This is known as the Pythagorean Theorem which is used to get distance in Euclidean Geometry. Transforming a point (essentially rotating around a pivot) is easily done. As we will be going for a simpler 3D engine we will use XY coordinates only.</p>
+
+This is known as the Pythagorean Theorem which is used to get distance in Euclidean Geometry. Transforming a point (essentially rotating around a pivot) is easily done. As we will be going for a simpler 3D engine we will use XY coordinates only.
+
 $$
 yaw = 35.00°
 \\[10pt]
@@ -44,7 +46,8 @@ rx \\ ry
 \end{bmatrix}
 $$
 
-What this does is compute the relative distance from a vertex to the camera on a 2D plane and then rotates it around the camera by yaw.
+
+What this does is compute the relative distance from a vertex to the camera on a 2D plane and then rotates it around the camera by yaw. 
 ## Getting Setup
 Getting setup is a relatively easy task but requires you to understand a programming language such as Python or C. As C is a simple compiled language, and much faster as such, this will be the language I am going to use. Use your desired editor like Visual Studio Code. Install SDL2 and then include it into a file called main.c - drop it into your project folder or install it onto your system. You can copy this example into your main.c and compile it to get a 16 bit software rendered window working.
 
