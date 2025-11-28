@@ -9,42 +9,36 @@ Matrices can be thought of rectangular arrays of numbers arranged in rows and co
 
 For example, let's say we have two vectors and we want to work out the distance.
 $$
-A = \left[\begin{array}{c}
-12 \\[4pt] 7 \\[4pt] 5
-\end{array}\right], \quad
-B = \left[\begin{array}{c}
--7 \\[4pt] 3 \\[4pt] 8
-\end{array}\right]
+A = \begin{bmatrix}
+12 \\ 7 \\ 5
+\end{bmatrix}, \quad
+B = \begin{bmatrix}
+-7 \\ 3 \\ 8
+\end{bmatrix}
 \qquad
 \|B - A\| = \sqrt{(-7 - 12)^2 + (3 - 7)^2 + (8 - 5)^2} \approx 19.65
 $$
-
-This is the Pythagorean distance in 3D. For the 2D XY rotation:
-
+This is known as the Pythagorean Theorem which is used to get distance in Euclidean Geometry. Transforming a point (essentially rotating around a pivot) is easily done. As we will be going for a simpler 3D engine we will use XY coordinates only.
 $$
-\text{yaw} = 35.00^\circ
+yaw = 35.00°
 \\[10pt]
-\left[\begin{array}{c}
-rx \\[4pt] ry
-\end{array}\right]
-=
-\left[\begin{array}{c}
-x_1 - x_0 \\[4pt] y_1 - y_0
-\end{array}\right]
+\begin{bmatrix}
+rx \\ ry
+\end{bmatrix} = \begin{bmatrix}
+x1-x0 \\ y1-y0
+\end{bmatrix}
 \\[20pt]
-\left[\begin{array}{c}
-tx \\[4pt] ty
-\end{array}\right]
-=
-\left[\begin{array}{cc}
-\cos(\text{yaw}) & -\sin(\text{yaw}) \\[4pt]
-\sin(\text{yaw}) & \cos(\text{yaw})
-\end{array}\right]
-\left[\begin{array}{c}
-rx \\[4pt] ry
-\end{array}\right]
+\begin{bmatrix}
+tx \\ ty
+\end{bmatrix}
+ = \begin{bmatrix}
+rx \\ ry
+\end{bmatrix} \;\times\;
+\begin{bmatrix}
+\cos(\mathrm{yaw}) & -\sin(\mathrm{yaw}) \\
+\sin(\mathrm{yaw}) & \cos(\mathrm{yaw})
+\end{bmatrix}
 $$
-
 
 What this does is compute the relative distance from a vertex to the camera on a 2D plane and then rotates it around the camera by yaw.
 ## Getting Setup
