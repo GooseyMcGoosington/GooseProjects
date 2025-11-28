@@ -1,11 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>{{ page.title }}</title>
-  {% include head.html %}
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css">
+
+  <script>
+    window.MathJax = {
+      tex: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    };
+  </script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      padding: 2rem;
+      background: #ffffff;
+    }
+    .markdown-body {
+      max-width: 900px;
+      width: 100%;
+    }
+  </style>
 </head>
+
 <body>
-  {{ content }}
+  <article class="markdown-body">
+    {{ content }}
+  </article>
 </body>
 </html>
