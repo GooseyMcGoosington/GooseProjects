@@ -1,4 +1,7 @@
-
+---
+layout: default
+title: Portal Renderer
+---
 
 # Software Rendering with Portals
 ## Introduction
