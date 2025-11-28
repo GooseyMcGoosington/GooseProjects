@@ -19,9 +19,10 @@ B = \begin{bmatrix}
 -7 \\ 3 \\ 8
 \end{bmatrix}
 \qquad
+
 \|B - A\| = \sqrt{(-7 - 12)^2 + (3 - 7)^2 + (8 - 5)^2} \approx 19.65
 $$
-This is known as the Pythagorean Theorem which is used to get distance in Euclidean Geometry. Transforming a point (essentially rotating around a pivot) is easily done. As we will be going for a simpler 3D engine we will use XY coordinates only.
+<p>This is known as the Pythagorean Theorem which is used to get distance in Euclidean Geometry. Transforming a point (essentially rotating around a pivot) is easily done. As we will be going for a simpler 3D engine we will use XY coordinates only.</p>
 $$
 yaw = 35.00°
 \\[10pt]
